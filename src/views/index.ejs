@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day advise</title>
+  </head>
+  <body>
+		<%
+			const date = new Date(env.date);
+			const weekDay = date.getDay()
+			const itsWeekday = weekDay >= 1 & weekDay <= 5;
+		%>
+
+    <h2><%- itsWeekday ? "Hey, it's weekday, it's time to work hard!" : "Hey, it's weekend, it's time to have fun!" %></h2>
+  </body>
+</html>
