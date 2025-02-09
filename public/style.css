@@ -1,0 +1,47 @@
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/** Form */
+form#posts-form {
+  top: 100vh;
+}
+
+/* OPEN */
+form#posts-form[data-opened-state="true"] {
+  transform: translateY(-100%);
+}
+
+/* CLOSED */
+form#posts-form[data-opened-state="false"] #toggle-open-form-button > * {
+  transform: rotate(180deg);
+  margin-bottom: 20px;
+}
+
+/* Blog Posts */
+.blog-post .blog-post-actions {
+  opacity: 0;
+  transform: translateY(-75%);
+  transition: 0.5s;
+}
+
+.blog-post:hover .blog-post-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blog-post
+  .blog-post-actions[data-editing-post-state="false"]
+  .update-blog-post-button,
+.blog-post
+  .blog-post-actions[data-editing-post-state="false"]
+  .cancel-update-blog-post-button {
+  display: none;
+}
+
+.blog-post
+  .blog-post-actions[data-editing-post-state="true"]
+  .edit-blog-post-button {
+  display: none;
+}
